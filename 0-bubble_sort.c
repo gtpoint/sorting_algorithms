@@ -24,21 +24,21 @@ void _swap(int *a, int *b)
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, len = size;
-	bool cond = false;
+	bool cond = true;
 
 	if (array == NULL || size < 2)
 		return;
 
-	while (cond == false)
+	while (cond == true)
 	{
-		cond = true;
+		cond = false;
 		for (i = 0; i < len - 1; i++)
 		{
 			if (array[i] > array[i + 1])
 			{
 				_swap(array + i, array + i + 1);
 				print_array(array, size);
-				cond = false;
+				cond = true;
 			}
 		}
 		len--;
